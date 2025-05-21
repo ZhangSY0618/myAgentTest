@@ -1,6 +1,6 @@
 # wrangler.toml
 name = "myagenttest" # 你的 Worker 名称，可以自定义
-main = ".mastra/output" # ⭐ 确保这个路径正确指向 Mastra 构建后的 Worker 文件
+main = ".mastra/output/index.mjs" # ⭐ 确保这个路径正确指向 Mastra 构建后的 Worker 文件
 compatibility_date = "2025-05-21" # 建议使用当前或未来日期，确保兼容性
 compatibility_flags = ["nodejs_compat"] # 启用 Node.js 兼容性
 minify = true # 启用代码压缩
