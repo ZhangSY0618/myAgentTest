@@ -1,0 +1,15 @@
+# wrangler.toml
+name = "my-agent-test" # 你的 Worker 名称，可以自定义
+main = "./dist/index.js" # ⭐ 确保这个路径正确指向 Mastra 构建后的 Worker 文件
+compatibility_date = "2025-05-21" # 建议使用当前或未来日期，确保兼容性
+compatibility_flags = ["nodejs_compat"] # 启用 Node.js 兼容性
+minify = true # 启用代码压缩
+
+# 如果你的 Worker 依赖环境变量，可以在这里配置，但更推荐使用 Cloudflare Secrets
+# [vars]
+# OPENAI_API_KEY = "your-api-key" # ⚠️ 仅用于本地测试，生产环境请用 Cloudflare Secrets
+
+# 如果你有其他资源绑定，例如 KV 命名空间，可以在这里添加
+# [[kv_namespaces]]
+# binding = "YOUR_KV_BINDING_NAME"
+# id = "YOUR_KV_NAMESPACE_ID"
